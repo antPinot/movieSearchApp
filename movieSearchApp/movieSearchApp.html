@@ -14,15 +14,36 @@
     defer></script>
 <script src="movieSearchApp.js" defer></script>
 
-<body onload="recupererDonnees()">
+<body>
     <main class="container-fluid">
-        <h1 class="d-flex justify-content center"> Bienvenue sur l'application de recherche de films</h1>
-        <div class="row">
-            <form class="col-3" id="formulaire" action="" method="get">
-                <input id="saisie" class="form-control col-3" type="search" name="search" id="search" placeholder="Votre Film">
-                <button class="btn btn-warning col-6" type="submit">Rechercher</button>
-            </form>
-        </div>
+        <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <ul class="navbar-nav nav-pills justify-content center ">
+                <li class="nav-item"><a class="nav-link" href="movieSearchApp.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.omdbapi.com/">L'API Omdb</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">A propos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </header>
+        <h1 class="text-center mb-4"> Bienvenue sur l'application de recherche de films</h1>
+        <form id="formulaire" action="" method="get">
+            <div class="form-group row mb-3">
+                <div class="col-2">
+                    <button id="previousPageButton" class="btn btn-primary">Previous Page</button>
+                </div>
+                <div class="col-6">
+                    <input id="saisie" class="form-control" type="search" name="search" id="search"
+                        placeholder="Votre Film">
+                </div>
+                <div class="col-2">
+                    <button id="searchButton" class="btn btn-warning" type="submit">Rechercher</button>
+                </div>
+                <div class="col-2">
+                    <button id="nextPageButton" class="btn btn-primary">Next Page</button>
+                </div>
+            </div>
+
+
+        </form>
         <div id="results" class="row">
         </div>
     </main>
